@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Title -->
+            <TextView
+                android:id="@+id/textViewSettingsTitle"
+                android:textSize="30sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/about_title"
+                android:textColor="@color/gui04"
+                android:textStyle="bold" />
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="100dp"
+                android:layout_height="4dp"
+                android:layout_marginBottom="16dp"
+                app:dividerColor="@color/gui0B" />
+
+            <!-- Description -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gui04"
+                android:text="Wordle is a word-guessing game where you try to guess the secret word in a limited number of attempts."
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- How to Play -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gui04"
+                android:text="How to Play:"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Step 1 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gui04"
+                android:text="@string/rule_1"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Step 2 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gui04"
+                android:text="@string/rule_2"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Step 3 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gui04"
+                android:text="@string/rule_3"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Color Legend -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="●"
+                    android:textSize="24sp"
+                    android:textColor="@color/gui0B"
+                    android:layout_marginEnd="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/gui04"
+                    android:layout_height="wrap_content"
+                    android:text="Correct letter in the correct position"
+                    android:textSize="16sp"/>
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="A"
+                android:textColor="@color/gui04"
+                android:textSize="24sp"
+                android:background="@drawable/correct"
+                android:backgroundTint="@color/gui0B"
+                android:gravity="center"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="●"
+                    android:textSize="24sp"
+                    android:textColor="@color/gui0A"
+                    android:layout_marginEnd="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gui04"
+                    android:text="Correct letter, but in the wrong position"
+                    android:textSize="16sp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="B"
+                android:textColor="@color/gui04"
+                android:textSize="24sp"
+                android:background="@drawable/correct"
+                android:backgroundTint="@color/gui0A"
+                android:gravity="center"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="●"
+                    android:textSize="24sp"
+                    android:textColor="@color/gui0F"
+                    android:layout_marginEnd="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gui04"
+                    android:text="Incorrect letter"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="C"
+                android:textColor="@color/gui04"
+                android:textSize="24sp"
+                android:background="@drawable/correct"
+                android:backgroundTint="@color/gui0F"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rule_4"
+                android:textSize="16sp"
+                android:textColor="@color/gui04"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Credits -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gui06"
+                android:text="Developed by: Detective Pikachu"
+                android:textSize="16sp"/>
+        </LinearLayout>
+</ScrollView>

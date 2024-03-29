@@ -1,0 +1,165 @@
+<!-- settings_fragment.xml -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/textViewSettingsTitle"
+            android:textSize="30sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_title"
+            android:textColor="@color/gui04"
+            android:textStyle="bold" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/dividerTitle"
+            android:layout_width="100dp"
+            android:layout_height="4dp"
+            android:layout_marginBottom="16dp"
+            app:dividerColor="@color/gui0B" />
+
+        <!-- Word Length Section -->
+        <TextView
+            android:id="@+id/textViewWordLengthTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Word Length"
+            android:textColor="@color/gui0A"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupWordLength"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Radio Button for 4-letter word -->
+            <RadioButton
+                android:id="@+id/radioButton4Letter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4 Letters"
+                android:textColor="@color/gui04" />
+
+            <!-- Radio Button for 5-letter word -->
+            <RadioButton
+                android:id="@+id/radioButton5Letter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5 Letters"
+                android:textColor="@color/gui04" />
+
+        </RadioGroup>
+
+        <!-- Difficulty Section -->
+        <TextView
+            android:id="@+id/textViewDifficultyTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Difficulty"
+            android:textColor="@color/gui0A"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupDifficulty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Radio Button for Easy -->
+            <RadioButton
+                android:id="@+id/radioButtonEasy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Easy - 7 Chances"
+                android:textColor="@color/gui04" />
+
+            <!-- Radio Button for Normal -->
+            <RadioButton
+                android:id="@+id/radioButtonNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Normal - 6 Chances"
+                android:textColor="@color/gui04" />
+
+            <!-- Radio Button for Hard -->
+            <RadioButton
+                android:id="@+id/radioButtonHard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hard - 4 Chances"
+                android:textColor="@color/gui04" />
+
+        </RadioGroup>
+
+        <!-- Sound Effects Section -->
+        <TextView
+            android:id="@+id/textViewSoundEffectsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Sound Effects"
+            android:textColor="@color/gui0A"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchSoundEffects"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Enable Sound Effects"
+            android:textColor="@color/gui04" />
+
+        <!-- Hints Section -->
+        <TextView
+            android:id="@+id/textViewHintsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Hints"
+            android:textColor="@color/gui0A"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchHints"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Enable Hints"
+            android:textColor="@color/gui04" />
+
+        <!-- Timer Section -->
+        <TextView
+            android:id="@+id/textViewTimerTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Timer"
+            android:textColor="@color/gui0A"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchTimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Enable Timer"
+            android:textColor="@color/gui04" />
+
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Wordle 2</string>
+    <string name="home">home</string>
+    <string name="scoreboard">scoreboard</string>
+    <string name="settings">settings</string>
+    <string name="about">about</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="rule_1">1. You have 5 attempts to guess the secret 4-letter word.</string>
+    <string name="rule_2">2. Enter your guess in the input field and tap \'Submit\'.</string>
+    <string name="rule_3">3. Each letter in your guess is color-coded to provide feedback:</string>
+    <string name="rule_4">4. Keep guessing until you\'ve correctly guessed the word or you run out of attempts!</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="socials">Share with Socials</string>
+    <string name="total_games">Total Games Played:</string>
+    <string name="scoreboard_title">Scoreboard</string>
+    <string name="settings_title">Settings</string>
+    <string name="about_title">About Wordle</string>
+    <string name="player_statistics">Player Statistics</string>
+    <string name="total_wins">Total Wins:</string>
+    <string name="total_losses">Total Losses:</string>
+    <string name="reset">Reset</string>
+    <string name="average_score">Average Score:</string>
+    <string name="fastest_run">Fastest Run:</string>
+</resources>

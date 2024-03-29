@@ -1,0 +1,35 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Wordle2" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <item name="colorPrimary">@color/gui06</item>
+        <item name="colorPrimaryVariant">@color/gui01</item>
+        <item name="colorOnPrimary">@color/gui0C</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/gui0A</item>
+        <item name="colorSecondaryVariant">@color/gui0B</item>
+        <item name="colorOnSecondary">@color/gui01</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/gui00</item>
+
+    </style>
+
+    <style name="base_theme">
+        <item name="android:textColor">@color/gui04</item>
+        <item name="android:background">@color/gui00</item>
+    </style>
+
+    <style name="StyleSeven" parent="android:Widget.TextView">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#222222</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textAlignment">textStart</item>
+    </style>
+
+
+    <style name="Theme.Wordle2" parent="Base.Theme.Wordle2" />
+</resources>

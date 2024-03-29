@@ -1,0 +1,195 @@
+<!-- scoreboard_fragment.xml -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+    <!-- Title -->
+    <TextView
+        android:id="@+id/textViewSettingsTitle"
+        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/scoreboard_title"
+        android:textColor="@color/gui04"
+        android:textStyle="bold"/>
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/dividerTitle"
+        android:layout_width="100dp"
+        android:layout_height="4dp"
+        android:layout_marginBottom="16dp"
+        app:dividerColor="@color/gui0B" />
+
+    <!-- Player Statistics -->
+    <TextView
+        android:id="@+id/text_statistics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/player_statistics"
+        android:textSize="18sp"
+        android:textColor="@color/gui0A"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Player Stats Details -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_corner_background"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp">
+
+        <!-- Total Games Played -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total_games"
+                android:textSize="16sp"
+                android:textColor="@color/gui0C" />
+            <TextView
+                android:id="@+id/games_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="10"
+
+                android:textStyle="bold"
+                android:textColor="@color/gui0A"
+                android:textSize="16sp" />
+        </LinearLayout>
+        <!-- Total Wins -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total_wins"
+                android:textSize="16sp"
+                android:textColor="@color/gui0C"  />
+            <TextView
+                android:id="@+id/text_total_wins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7"
+                android:layout_marginStart="6dp"
+                android:textStyle="bold"
+                android:textColor="@color/gui0A"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Total Losses -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total_losses"
+                android:textSize="16sp"
+                android:textColor="@color/gui0C" />
+            <TextView
+                android:id="@+id/text_total_losses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:layout_marginStart="6dp"
+                android:textStyle="bold"
+                android:textColor="@color/gui0A"
+                android:textSize="16sp" />
+        </LinearLayout>
+        <!-- Average Score -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/average_score"
+                android:textSize="16sp"
+                android:textColor="@color/gui0C" />
+            <TextView
+                android:id="@+id/text_average_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="232"
+                android:layout_marginStart="6dp"
+                android:textStyle="bold"
+                android:textColor="@color/gui0A"
+                android:textSize="16sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fastest_run"
+                android:textSize="16sp"
+                android:textColor="@color/gui0C" />
+            <TextView
+                android:id="@+id/text_fastest_run"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="22min:16sec"
+                android:layout_marginStart="6dp"
+                android:textStyle="bold"
+                android:textColor="@color/gui0A"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Past Scores -->
+    <TextView
+        android:id="@+id/text_past_scores"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Past Scores"
+        android:textSize="18sp"
+        android:textColor="@color/gui0A"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <!-- List of Past Scores -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_past_scores"
+        android:layout_width="match_parent"
+        android:background="@drawable/rounded_corner_background"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Share Button -->
+    <Button
+        android:id="@+id/btn_share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/socials"
+        android:textSize="16sp"
+        android:textColor="@color/gui0A"
+        android:background="@drawable/rounded_button_background"
+        android:layout_marginTop="16dp" />
+    </LinearLayout>
+</ScrollView>
