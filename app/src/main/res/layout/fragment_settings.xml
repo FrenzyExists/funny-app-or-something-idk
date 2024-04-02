@@ -82,7 +82,7 @@
                 android:id="@+id/radioButtonEasy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Easy - 7 Chances"
+                android:text="Easy - 6 Chances"
                 android:textColor="@color/gui04" />
 
             <!-- Radio Button for Normal -->
@@ -90,7 +90,7 @@
                 android:id="@+id/radioButtonNormal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Normal - 6 Chances"
+                android:text="Normal - 5 Chances"
                 android:textColor="@color/gui04" />
 
             <!-- Radio Button for Hard -->

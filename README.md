@@ -5,8 +5,6 @@ Submitted by: Angel L Garcia (Detective Pikachu)
 
 The Dark version of the "kinda if you're from San Francisco" popular word game [Wordle](https://www.nytimes.com/games/wordle/index.html).
 
-A lite version of the popular word game [Wordle](https://www.nytimes.com/games/wordle/index.html).
-
 Time spent: **4** hours spent initially, **30** hours on the new and improved version.
 
 If you want to see the older version check it right [here](https://github.com/FrenzyExists/Wordle)

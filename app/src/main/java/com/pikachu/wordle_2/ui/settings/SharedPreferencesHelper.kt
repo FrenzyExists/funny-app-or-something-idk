@@ -8,28 +8,40 @@ class SharedPreferencesHelper(context: Context) {
     private val sharedPreferences: SharedPreferences =
         context.getSharedPreferences("settings", Context.MODE_PRIVATE)
 
-    private enum class SettingKeys {
-        WORD_LENGTH,
-        DIFFICULTY,
-        SOUND_EFFECTS,
-        HINTS,
-        TIMER,
-        VIBRATION,
-        IDFK
-    }
+    enum class SettingKeys(val displayName: String) {
+        WORD_LENGTH("Word Length"),
+        DIFFICULTY("Difficulty"),
+        SOUND_EFFECTS("Sound Effects"),
+        HINTS("Hints"),
+        TIMER("Timer"),
+        VIBRATION("VibrationEnable");
 
-    fun saveValue(value: String) {
-        sharedPreferences.edit {
-            putString(KEY_VALUE, value)
+        companion object {
+            fun fromDisplayName(name: String): SettingKeys? {
+                return entries.find { it.displayName == name }
+            }
         }
     }
 
-
-    fun getValue(): String? {
-        return sharedPreferences.getString(KEY_VALUE, null)
+    private fun settingsToString(key: SettingKeys): String {
+        return key.displayName
     }
 
-    companion object {
-        private const val KEY_VALUE = "key_test"
+    fun saveSettings(value: Any, key: SettingKeys) {
+        sharedPreferences.edit {
+            when (value) {
+                is Boolean -> putBoolean(settingsToString(key), value)
+                is String -> putString(settingsToString(key), value)
+                else -> throw IllegalArgumentException("Unsupported setting type")
+            }
+        }
+    }
+
+    fun getSettings(key: SettingKeys): Any? {
+        return if(key == SettingKeys.SOUND_EFFECTS || key == SettingKeys.HINTS) {
+            sharedPreferences.getBoolean(settingsToString(key), false)
+        } else {
+            sharedPreferences.getString(settingsToString(key), null)
+        }
     }
 }

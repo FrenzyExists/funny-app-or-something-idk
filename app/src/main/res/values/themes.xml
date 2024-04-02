@@ -30,6 +30,5 @@
         <item name="android:textAlignment">textStart</item>
     </style>
 
-
     <style name="Theme.Wordle2" parent="Base.Theme.Wordle2" />
 </resources>

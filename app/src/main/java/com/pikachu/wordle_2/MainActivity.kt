@@ -28,9 +28,6 @@ class MainActivity : AppCompatActivity() {
                 id.aboutBtn -> replaceFragment(AboutFragment())
                 id.scoreBtn -> replaceFragment(ScoreboardFragment())
                 id.settingsBtn -> replaceFragment(SettingsFragment())
-                else -> {
-
-                }
             }
             true
         }

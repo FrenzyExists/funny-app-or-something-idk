@@ -1,19 +1,108 @@
 package com.pikachu.wordle_2.ui.settings
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 
 class SettingsViewModel(private val sharedPreferencesHelper: SharedPreferencesHelper) : ViewModel() {
+    private val _wordLength = MutableLiveData<String>()
+    private val _difficulty = MutableLiveData<String>()
+    private var _soundEnabled = MutableLiveData<Boolean>()
+    private val _hintEnabled = MutableLiveData<Boolean>()
+    private val _timerEnabled = MutableLiveData<Boolean>()
 
-    fun saveValue(value: String) {
+    // Expose LiveData for soundEnabled
+
+    val wordLength: LiveData<String>
+        get() = _wordLength
+
+    val difficulty: LiveData<String>
+        get() = _difficulty
+
+    val soundEnabled: LiveData<Boolean>
+        get() = _soundEnabled
+
+    val hintEnabled: LiveData<Boolean>
+        get() = _hintEnabled
+
+    val timerEnabled: LiveData<Boolean>
+        get() = _timerEnabled
+
+    fun saveDifficulty(value: String) {
         viewModelScope.launch {
-            sharedPreferencesHelper.saveValue(value)
+            sharedPreferencesHelper.saveSettings(value, SharedPreferencesHelper.SettingKeys.DIFFICULTY)
+        }
+    }
+    fun saveWordLength(value: String) {
+        viewModelScope.launch {
+            sharedPreferencesHelper.saveSettings(value, SharedPreferencesHelper.SettingKeys.WORD_LENGTH)
+        }
+    }
+    fun saveSound(value: Boolean) {
+        viewModelScope.launch {
+            sharedPreferencesHelper.saveSettings(value, SharedPreferencesHelper.SettingKeys.SOUND_EFFECTS)
         }
     }
 
-    fun getValue(): String? {
-        return sharedPreferencesHelper.getValue()
+    fun saveHint(value: Boolean) {
+        viewModelScope.launch {
+            sharedPreferencesHelper.saveSettings(value, SharedPreferencesHelper.SettingKeys.HINTS)
+        }
+    }
+
+    fun saveTimer(value: Boolean) {
+        viewModelScope.launch {
+            sharedPreferencesHelper.saveSettings(value, SharedPreferencesHelper.SettingKeys.TIMER)
+        }
+    }
+    // ---------------------------------------------------------------------------------------------
+
+    fun getDifficulty(): String? {
+        val value = sharedPreferencesHelper.getSettings(SharedPreferencesHelper.SettingKeys.DIFFICULTY)
+        return if (value is String) {
+            _difficulty.value = value!!
+            value
+        } else {
+            null
+        }
+    }
+    fun getWordlength(): String? {
+        val value = sharedPreferencesHelper.getSettings(SharedPreferencesHelper.SettingKeys.WORD_LENGTH)
+        return if (value is String) {
+            _wordLength.value = value!!
+            value
+        } else {
+            null
+        }
+    }
+    fun getSound(): Boolean? {
+        val value = sharedPreferencesHelper.getSettings(SharedPreferencesHelper.SettingKeys.SOUND_EFFECTS)
+        return if (value is Boolean) {
+            _soundEnabled.value = value!!
+            value
+        } else {
+            null
+        }
+    }
+    fun getWordHint(): Boolean? {
+        val value = sharedPreferencesHelper.getSettings(SharedPreferencesHelper.SettingKeys.HINTS)
+        return if (value is Boolean) {
+            _hintEnabled.value = value!!
+            value
+        } else {
+            null
+        }
+    }
+    fun getTimer(): Boolean? {
+        val value = sharedPreferencesHelper.getSettings(SharedPreferencesHelper.SettingKeys.TIMER)
+        return if (value is Boolean) {
+            _timerEnabled.value = value!!
+            value
+        } else {
+            null
+        }
     }
 }
 
